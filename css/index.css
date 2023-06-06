@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif,
+                     Georgia, 'Times New Roman', Times, serif;
+    line-height: 24px;
+    background-color: lightgray;
+}
+main {
+    max-width: 1200px;
+    margin: 1em auto;
+    padding: 1.5em;
+}
+section:nth-of-type(1){
+    display: flex;
+    margin-bottom: 1em;
+    padding: 1.5em;
+    border-radius: 2em;
+    background-color: beige;
+}
+.headline__image {
+    width: 250%;
+    height: 15em;
+    margin-right: 1.6em;
+}
+.card{
+    outline: solid 1.5px lightgrey;
+    padding: 1.5em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: ghostwhite;
+}
+.featured-news__excerpt{
+    /* flex-grow: 1.2; */
+}
+
+/* Utilities */
+.fw-bold-one {
+    font-weight: 800;
+}
+.fw-bold-thin {
+    font-weight: 700;
+}
+.pt-half {
+    padding-top: 0.5em;
+}
+.mt-one {
+    margin-top: 1em;
+}
+.pb-half {
+    padding-bottom: 0.5em;
+}
+.flex-grow-half{
+    flex-grow: 0.5;
+}
+.flex-grow-1 {
+    flex-grow: 1;
+}
+.w-50 {
+    width: 50%;
+}
+.text-center{
+    text-align: center;
+}
+
+
+/* media queries */
+@media (min-width: 1020px){
+    .row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        
+    }
+    .featured__image{
+        width: 99%;
+        height: 15em;
+    }
+}
+
+@media (max-width: 1020px){
+    .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+
+    }
+    .featured__image{
+        width: 99%;
+        height: 15em;
+    }
+    .headline p {
+        line-height: 24px;
+        max-height: 72px;
+        overflow: hidden;
+        
+    }
+    .headline__image {
+        width: 20em;
+    }
+}
+@media (max-width: 680px){
+    .row{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
+    }
+    .headline__image {
+        display: none;
+    }
+    .headline p {
+        line-height: 24px;
+        max-height: 96px;
+        overflow: hidden;
+        
+    }
+    
+}
